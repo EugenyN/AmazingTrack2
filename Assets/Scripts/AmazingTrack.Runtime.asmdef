@@ -1,0 +1,19 @@
+{
+    "name": "AmazingTrack.Runtime",
+    "rootNamespace": "AmazingTrack",
+    "references": [
+        "Leopotam.EcsLite",
+        "Unity.TextMeshPro",
+        "Unity.InputSystem",
+        "Unity.ugui"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

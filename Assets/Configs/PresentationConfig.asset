@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030aff9d1aa75684c89e3e251e493988, type: 3}
+  m_Name: PresentationConfig
+  m_EditorClassIdentifier: AmazingTrack.Runtime::AmazingTrack.Config.PresentationConfig
+  blockPrefab: {fileID: 3262994692137390276, guid: 814b71dc6c37e704c8d01249e3cb8e72, type: 3}
+  ballPrefab: {fileID: 6129510117045283086, guid: f3f1a90929bda344aa10938cffacb52a, type: 3}
+  crystalPrefab: {fileID: 6595343252274783751, guid: 78bc59627e1dba54b9f2cba5a99426fc, type: 3}
+  goldenCrystalPrefab: {fileID: 6595343252274783751, guid: 6f407b763a70ae047b07a342f71f708f, type: 3}
+  crystalPickupFxPrefab: {fileID: 3611518600016411218, guid: a7143b34e740c80478dcaec954a11f77, type: 3}
+  turnClip: {fileID: 8300000, guid: 73a6c62ddfe23b44bb0a7cc7bd564278, type: 3}
+  gameStartClip: {fileID: 8300000, guid: 01173e6a0a8dfd94ca58cd38c265d681, type: 3}
+  nextLevelClip: {fileID: 8300000, guid: 5e966ec0c45a41f43ae1c3504164d54f, type: 3}
+  fallClip: {fileID: 8300000, guid: 8cfe3be4d2987ee46be2a7ce11949781, type: 3}
+  jumpClip: {fileID: 8300000, guid: 49d70d3f432c0154aa43a4b6bb804aaf, type: 3}
+  crystalClip: {fileID: 8300000, guid: b6039e869b88dfe449ea7e1b11ca2a4c, type: 3}
+  blockFallDelay: 0.4
+  blockFallGravity: 25
+  blockFallMaxSpeed: 20
+  blockFallYThreshold: -10
+  ballFallHorizontalSpeed: 3
+  ballFallGravityScale: 2
+  gameOverDelay: 1.5
+  crystalBobAmplitude: 0.04
+  crystalFallSpeedFactor: 0.6
+  comboFloatDistance: 50
+  comboFloatDuration: 0.3
+  comboLabelLifetime: 1.5
+  levelUpFloatLifetime: 2.5
+  colorSaturation: {x: 0.5, y: 0.75}
+  colorValue: {x: 0.8, y: 0.95}
+  backgroundZenithSaturation: 0.45
+  backgroundZenithValue: 0.45
+  backgroundHorizonSaturation: 0.3
+  backgroundHorizonValue: 0.9
+  backgroundTransitionDuration: 1.2
+  backgroundBreatheAmplitude: 0.05
+  backgroundBreathePeriod: 10
+  backgroundDefeatZenith: {r: 0.1, g: 0, b: 0, a: 1}
+  backgroundDefeatHorizon: {r: 0.45, g: 0.05, b: 0.05, a: 1}
+  cameraLerpRate: 10
+  cameraOrthoSizeLandscape: 5
+  cameraOrthoSizePortrait: 8
+  cameraAspectLandscape: 1
+  cameraAspectPortrait: 0.55

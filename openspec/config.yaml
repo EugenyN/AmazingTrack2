@@ -1,0 +1,47 @@
+schema: spec-driven
+
+# Project context (optional)
+# Add only constraints that should guide OpenSpec artifacts and workflows.
+# Include constraints an agent cannot infer by reading the code.
+# Keep general project documentation and discoverable codebase facts out.
+context: |
+  All in-game texts (UI labels, HUD, menus, buttons, prompts) must be in English.
+  All code comments and XML doc comments must be in English.
+  Never hand-edit .unity/.prefab/.asset files; edit the scene through the live Unity Editor (Pipeline) or give the user manual steps.
+  Code must use LeoEcsLite properly: systems iterate entities via EcsFilter + EcsPool (world.Filter<T>().End(), world.GetPool<T>()), no god-objects like a shared track list.
+  Naming: systems end with *System; components end with *Component or *Tag; one-frame event components end with *EventComponent.
+  Static helper classes (pure-function utilities, no instance state) end with *Helper; extension-method containers keep the *Extensions convention.
+  Example components per entity: Block, Ball, Crystal, GameState. Entities reference their view via a ViewLinkComponent (GameObject View, Transform Transform).
+  Every game entity type (Block, Ball, Crystal, ...) must have a Unity prefab.
+  Ball/track queries (ground check, crystal pickup, overlap tests) use Physics queries (SphereCast, OverlapSphere, OverlapBox); do not use integer grid/cell math.
+  Track: each next block is placed directly ahead (head-to-tail) or to the right (head aligned with the head edge of the previous block), never to the left; the ball moves only forward or right.
+  Views for prefab-backed entities (Block, Crystal, pickup FX) must be acquired and released through UnityEngine.Pool.ObjectPool<T> pools hosted in SharedData; do not Instantiate/Destroy these views during play.
+  Memory: no GC allocations during play more often than every 0.5 s; nothing may allocate inside per-frame Run(IEcsSystems) paths (no per-frame collection creation, no per-spawn GetComponent/GetComponentsInChildren/AddComponent/new on the hot path); reuse pre-allocated buffers and fields instead.
+skillsScope: project
+
+# Example:
+#   context: |
+#     Designs and tasks must cover Windows, macOS, and Linux
+#     Write all artifacts in Spanish
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always state what is out of scope
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
+
+# Per-operation guidance (optional)
+# Add advisory guidance for how apply and archive work should be conducted.
+# This is separate from artifact rules above.
+# Example:
+#   operations:
+#     apply:
+#       guidance:
+#         - Keep test summaries concise
+#     archive:
+#       guidance:
+#         - Summarize the archive outcome before finishing

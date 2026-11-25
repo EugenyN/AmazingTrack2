@@ -1,0 +1,23 @@
+{
+    "name": "AmazingTrack.Tests.PlayMode",
+    "rootNamespace": "AmazingTrack.Tests.PlayMode",
+    "references": [
+        "AmazingTrack.Runtime",
+        "Leopotam.EcsLite",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
